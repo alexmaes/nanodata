@@ -1,0 +1,17 @@
+{% extends 'home/base.html' %}
+
+
+{% block content %}
+<div class='inner-page'>
+	<h2>L'équipe</h2>
+	{% for p in people %}
+	<div class='paragraph'>
+		<div>{{p.firstname}}</div>
+		<div>{{p.biography}}</div>
+		<!-- <img src="{{ p.picture }}" height="420"> -->
+	</div>
+	{% endfor %}
+
+</div>
+
+{% endblock %}

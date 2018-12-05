@@ -1,0 +1,49 @@
+body{
+	margin: 0;
+}
+
+#page-container{
+	margin-top: 80px;
+	height: 100%;
+	font-family: 'Exo 2', sans-serif;
+}
+
+#page-menu{
+	background-color: white;
+	width: 300px;
+	/*margin-top: 80px;*/
+	min-height: 500px;
+	/*height: 100%;*/
+	float: left;
+	padding: 20px;
+}
+
+#page-content{
+	float: left;
+	margin-left: 20px;
+	width: 800px;
+	min-height: 600px;
+	background-color: white;
+}
+
+.inner-page{
+	padding: 10px;
+}
+
+h1{
+	font-size: 3em;
+}
+
+h2{
+	font-size: 2em;
+	color: #9b0000;
+}
+
+.paragraph{
+	padding-top: 20px;
+}
+
+.img-container > p{
+	color: grey;
+	font-size: 0.8em;
+}

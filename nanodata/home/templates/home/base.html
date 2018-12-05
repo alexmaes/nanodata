@@ -1,0 +1,30 @@
+{% load static %}
+<html>
+	<head>
+		<title>NanoData</title>
+		<link rel="stylesheet" type="text/css" href="{% static 'home/css/stylesheet.css' %}"/>
+		<style>
+			body{
+				background-image:url('{% static 'home/images/ibpc_background.jpg' %}');
+				background-repeat:no-repeat;
+				background-size:100%;
+				background-attachment: fixed;
+			}
+		</style>
+		<link href="https://fonts.googleapis.com/css?family=Exo+2" rel="stylesheet">
+		<script> var GLOBAL_csrf_token = '{% csrf_token %}';</script>
+	</head>
+	<body>
+		<div id='page-container'>
+			<div id="page-menu">
+				<a href=''><img src="{% static 'home/images/rev_dna.png' %}" alt="nanodata"></a>
+				<ul><a href="{% url 'home:index' %}">Le projet</a></ul>
+				<ul><a href="{% url 'home:text_encode' %}">Encode to texte!</a></ul>
+				<ul><a href="{% url 'home:rencontres' %}">Rencontres</a></ul>
+				<ul><a href="{% url 'home:team' %}">L'équipe</a></ul>
+				<ul><a href="{% url 'home:partners' %}">Les partenaires</a></ul>
+			</div>
+			<div id="page-content">{% block content %} {% endblock %}</div>
+		</div>
+	</body>
+</html>

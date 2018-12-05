@@ -1,3 +1,65 @@
-HELLO
+{% extends 'home/base.html' %}
+{% load static %}
 
-TEST COMMIT 2
+
+{% block content %}
+<div class='inner-page'>
+		<h1>à propos du projet</h1>
+	<div>
+
+	</div>
+
+	<div class='paragraph'>
+		<h2>Qui sommes-nous ?</h2>
+		<p>L'idée d'encodage de textes sur de l'ADN est née au sein d'une association étudiante nommée Alma Mater. Elle s'est ensuite mutée en projet au sein de l'équipe de biologie de synthèse de Stéphane Lemaire, directeur de l'Unité Mixte de Recherche (UMR) 8226 de l'Institut de Biologie Physico-Chimique (<a href='http://www.ibpc.fr/'>IBPC</a>) du Centre National de la Recherche Scientifique (CNRS) et de Sorbonne Université. C'est autour de ce projet que nous nous sommes rencontrés, Stéphane, Pierre et moi: Jeanne Le Peillet. J'ai été engagée en tant qu'ingénieure et responsable du projet. Ensemble, nous avons pu concrétiser le projet en travail interdisciplinaire en réunissant des spécialistes de tous les domaines possibles. Ainsi, ce projet n'a pas été seulement pensé par les biologistes que nous sommes, mais aussi par des informaticiens, des mathématiciens, des historiens, des sociologues, des philosophes, des politiques, sans oublier le support d'institutions telles que les Archives Nationales et l'UNESCO.
+		</p>
+	</div>
+	
+	<div class='paragraph'>
+		<h2>D'où vient ce choix de textes ?</h2>
+		
+		<div class="img-container">
+			<img src="{% static 'home/images/dh_image1.jpg' %}" alt="dh_img1">
+			<p>"Déclaration des Droits de l'Homme et du Citoyen", Le Barbier, 1789, huile sur toile 71x56 cm, Musée Carnavalet, Paris. (Wikipédia).</p>
+		</div>
+		<p>Le laboratoire au sein duquel nous travaillons se situe dans un lieu historique: il s'agit des locaux où travailla Marie Curie, première femme a avoir obtenu le prix Nobel ! Nous avons donc tenu à débuter ce projet par des textes français à forte valeur symbolique et historique. L'un des textes sélectionné a été choisi parmi ceux inscrits au programme <a href='https://fr.unesco.org/programme/mow'>Mémoire du Monde</a> de l'UNESCO : il s'agit de  la <a href='https://www.legifrance.gouv.fr/Droit-francais/Constitution/Declaration-des-Droits-de-l-Homme-et-du-Citoyen-de-1789'>Déclaration des Droits de l'Homme et du Citoyen</a>, de 1789. Bien que ce texte soit à la base de la démocratie française, il a fait débat lors de son acceptation car il omettait de mentionner toute une partie de la population, dont les femmes. Il nous a donc semblé important de l'accompagner de la <a href='https://gallica.bnf.fr/ark:/12148/bpt6k64848397'>Déclaration de la Femme et de la Citoyenne </a>, texte non institutionnel rédigé par Olympe de Gouges et publié en 1791. L'association de ces deux déclarations véhicule des valeurs humanistes auxquelles nous sommes attachés. de plus, ce choix soulève des problématiques encore très actuelles concernant l'égalité des droits entre hommes et femmes.
+		</p>
+	</div>
+
+	<div class='paragraph'>
+		<h2>Pourquoi stocker sur de l'ADN ?</h2>
+		
+		<div class="img-container">
+			<img src="{% static 'home/images/matrix.jpg' %}" alt="dh_img1">
+			<p>Image tirée du film Matrix, réalisé par les sœurs Wachowshi en 1999.</p>
+		</div>
+		<p>Les informations numériques sont aujourd'hui stockées sur des disques à durée de vie limitée (<a href='https://www.lemonde.fr/planete/article/2011/07/07/les-data-centers-de-vraies-usines-electriques_1546181_3244.html'>une vingtaine d'années en moyenne</a>), encombrants (les hangars de stockage, appelés data centers, couvrent près de <a href='https://www.lebigdata.fr/definition-data-center-centre-donnees'>17 000 ha</a> à travers le monde) et énergivores (les données numériques sont traitées par des machines nécessitant une alimentation électrique constante, aussi bien pour leur fonctionnement que pour leur refroidissement). Mais le stockage digital est une forme de stockage inventée par l'homme de toutes pièces. or il existe une autre forme de stockage inventée il y a presque 4 milliards d'années : il s'agit de l'ADN. Sa compacité et sa stabilité sont à ce point performants que sa structure n'a pas changé depuis son apparition! Les qualités offertes par l'ADN comme support de stockage sont nombreuses :
+
+		Schéma pour montrer les différents points positifs de l'ADN comme support de stockage
+
+		Ci-dessous, la quantité d'énergie consommée par les data centers du monde entier, en kWh:	
+		</p>
+		<script type="text/javascript" src="https://www.planetoscope.com/widget.php?id=230&f=4"></script>
+		<div class="img-container">
+			<img src="{% static 'home/images/tunisie.jpg' %}" alt="dh_img1">
+			<p>La superficie totale occupés par les différents centres de données répartis dans le monde dépasse aujourd'hui la taille de la Tunisie. (Photo: Alibabuy).
+			</p>
+		</div>
+	</div>
+
+	<div class='paragraph'>
+		<h2>Mais au fait, c'est quoi l'ADN ?</h2>
+		<p>Pour vous la péter, vous pouvez aussi l'appeler Acide DésoxyriboNucléique ! Mais en vérité, ce nom à rallonge ne veut rien dire d'autre que : "assemblage de nucléotides", ou pour être plus précis "acide constitué d'un assemblage de bases nucléiques (-nucléique) chacune liée à un sucre (-ribo-) qui a perdu un oxygène (désoxy-) et lui-même relié à un groupe phosphate".
+
+		<br>"Mais une base nucléique, c'est quoi ?"
+
+		<br>Son autre petit nom est "base azotée" :  il s'agit tout simplement d'un composé organique doté d'atomes d'azote !
+
+		<br>"Et un composé organique ?"
+
+		<br>Rien de plus simple : une molécule comportant au moins un atome de carbone (même si il existe quelques exceptions). 
+		</p>
+	</div>
+</div>
+
+{% endblock %}

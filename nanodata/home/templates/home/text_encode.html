@@ -1,0 +1,26 @@
+{% extends 'home/base.html' %}
+{% load staticfiles %}
+
+{% block content %}
+<div class='inner-page'>
+	<h2>ENCODE</h2>
+
+	<div id="geneit_container">
+			<div id="geneit_input_text_area" data-url= "{% url 'home:post_text' %}" class="gi_block_area">
+				<textarea id="text_input_value" cols="50" placeholder="Type text" value="" class="gi_text_area" ></textarea>
+				<div id="gi_stats_input" class="gi_stats"></div>
+			</div>
+			<select id="conv_selector">
+				{% for i in data.conv_methods %} <option value={{i}}>{{i|title}}</option> {% endfor %}
+			</select>
+			<div id="geneit_output_text_area" class="gi_block_area">
+				<div id='output_text' class="gi_text_area"></div>
+				<div id="gi_stats_output" class="gi_stats"></div>
+			</div>
+		</div>
+
+		<script src="{% static 'home/js/gene_it_viewer.js' %}"></script>
+		<script> new GeneIT_viewer("geneit_container") </script>
+</div>
+
+{% endblock %}
